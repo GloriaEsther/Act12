@@ -13,7 +13,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleRoleChange = (e) => {
-    setRol(e.target.value);
+    //setRol(e.target.value);
     setExtraFields({});
   };
 
@@ -44,7 +44,7 @@ const Register = () => {
       if (response.ok) {
         setSuccessMessage("Usuario registrado correctamente"); // Mostrar mensaje de éxito
         alert("Usuario registrado exitosamente");
-        setError(""); // Limpiar cualquier mensaje de error
+        setError("");
 
         // Redirigir al login o a la página de inicio según el rol
         if (user === "vendedor") {
