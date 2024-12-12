@@ -12,14 +12,14 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql', // Tipo de base de datos
-      host: '127.0.0.1', // Cambia si usas un host diferente
-      port: 3306, // Puerto por defecto de MySQL
-      username: 'root', // Cambia esto por tu nombre de usuario
-      password: 'prograweb', // Cambia esto por tu contraseña
-      database: 'snackfast', // Nombre de tu base de datos
-      entities: [__dirname + '/**/*.entity{.ts,.js}'], // Ubicación de las entidades
-      synchronize: false, // Solo para desarrollo; evita en producción
+      type: 'mysql', 
+      host: 'localhost', 
+      port: 3306,//3308, // Cambia a 3306 si es necesario
+      username: 'root', 
+      password: '1234', // Asegúrate de que este valor sea correcto
+      database: 'snackfast', 
+      entities: [__dirname + '/**/*.entity{.ts,.js}'], 
+      synchronize: false, // true crea las migraciones automaticamente,false es una por una
     }),
     CompradorModule,
     ProductoModule,
